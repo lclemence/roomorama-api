@@ -458,6 +458,10 @@ module RoomoramaApi
         auth_put(host_property_url(property_hash), property_hash)
       end
 
+      def delete_property(property_hash)
+        auth_delete(host_property_url(property_hash), property_hash)
+      end
+
       # Sets a property as instantly available
       #
       # @example
