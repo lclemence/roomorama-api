@@ -5,6 +5,7 @@ require 'json'
 require_relative 'roomorama_api/host/properties'
 require_relative 'roomorama_api/host/availabilities'
 require_relative 'roomorama_api/host/images'
+require_relative 'roomorama_api/all/destinations'
 
 require_relative 'roomorama_api/config'
 require_relative 'roomorama_api/client'

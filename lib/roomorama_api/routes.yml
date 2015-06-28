@@ -1,3 +1,5 @@
+v0_0:
+  destinations: "destinations"
 v1_0:
   host_properties: "host/rooms"
   host_property: "host/rooms/%{id}"
