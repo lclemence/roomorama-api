@@ -1,5 +1,3 @@
-v0_0:
-  destinations: "destinations"
 v1_0:
   host_properties: "host/rooms"
   host_property: "host/rooms/%{id}"
@@ -8,6 +6,7 @@ v1_0:
   host_image: "host/rooms/%{room_id}/images/%{id}"
   host_units: "host/rooms/%{room_id}/units"
   host_unit: "host/rooms/%{room_id}/units/%{id}"
+  all_destinations: "destinations"
 
 v2_0:
   host_instantly_available: "host/rooms/%{room_id}/instant"

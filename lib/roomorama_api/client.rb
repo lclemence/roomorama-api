@@ -7,8 +7,7 @@ module RoomoramaApi
 
     END_POINTS_V1_0 = CONFIG_END_POINTS["v1_0"]
     END_POINTS_V2_0 = CONFIG_END_POINTS["v2_0"]
-    END_POINTS_NONE = CONFIG_END_POINTS["v0_0"]
-    END_POINTS = (END_POINTS_V1_0.merge(END_POINTS_V2_0)).merge(END_POINTS_NONE)
+    END_POINTS = END_POINTS_V1_0.merge(END_POINTS_V2_0)
 
     attribute_method_suffix :_url
     define_attribute_methods END_POINTS.keys
@@ -57,11 +56,8 @@ module RoomoramaApi
       api_version = @config.api_version
       api_version = "v2.0" if END_POINTS_V2_0.has_key? attribute
       raise(EndpointNotImplemented, end_point) unless end_point
-      if end_point == 'destinations'
-        url = "#{@config.base_url}/#{end_point}.json"
-      else
-        url = "#{@config.base_url}/#{api_version}/#{end_point}.json"
-      end
+
+      url = "#{@config.base_url}/#{api_version}/#{end_point}.json"
       hash ? (url % hash) : url
     end
 
